@@ -12,6 +12,6 @@ class LogUser extends CI_Controller {
 		if($data != null)
 		redirect('index.php/acceuil');
 		else 
-			redirect('FormLoginUser');
+			redirect('index.php/FormLoginUser');
 	}
 }

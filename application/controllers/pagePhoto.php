@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class FormaddObjet extends CI_Controller {
+class pagePhoto extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('ajouterObjet');
+		$this->load->view('ajouterPhoto');
 	}		
 }

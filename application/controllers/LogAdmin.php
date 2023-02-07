@@ -12,6 +12,6 @@ class LogAdmin extends CI_Controller {
         if($data != null)
             redirect("index.php/acceuilAdmin");
         else 
-            redirect('FormLoginAdmin');
+            redirect('index.php/FormLoginAdmin');
 	}		
 }
