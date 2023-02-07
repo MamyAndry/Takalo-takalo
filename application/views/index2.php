@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="<?php echo site_url('css/bootstrap.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo site_url('css/magnific-popup.css'); ?>">
     <link rel="stylesheet" href="<?php echo site_url('css/jquery-ui.css'); ?>">
-    <link rel="stylesheet" href="<?php echo site_url('css/owl.carousel.min.css'); ?>">
-    <link rel="stylesheet" href="<?php echo site_url('css/owl.theme.default.min.css'); ?>">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
 
-    <link rel="stylesheet" href="<?php echo site_url('css/aos.css'); ?>">
+    <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="<?php echo site_url('css/style.css'); ?>">
     
@@ -89,7 +89,7 @@
             <li><a href="shop.html">Shop</a></li>
             <li><a href="#">Catalogue</a></li>
             <li><a href="#">New Arrivals</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="<?php echo site_url('index.php/pageObjet'); ?>">ajouter objet</a></li>
           </ul>
         </div>
       </nav>
@@ -151,7 +151,7 @@
           <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade" data-aos-delay="">
             <a class="block-2-item" href="#">
               <figure class="image">
-                <img src="<?php echo site_url('images/women.jpg'); ?>" alt="" class="img-fluid">
+                <img src="images/women.jpg" alt="" class="img-fluid">
               </figure>
               <div class="text">
                 <span class="text-uppercase">Collections</span>
