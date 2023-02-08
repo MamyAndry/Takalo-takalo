@@ -36,7 +36,7 @@
 
             <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
               <div class="site-logo">
-                <a href="index.html" class="js-logo-clone">Shoppers</a>
+                <a href="index.html" class="js-logo-clone">Takalo</a>
               </div>
             </div>
 
@@ -86,7 +86,6 @@
                 <li><a href="#">Menu Three</a></li>
               </ul>
             </li>
-            <li><a href="shop.html">Shop</a></li>
             <li><a href="#">Catalogue</a></li>
             <li><a href="#">New Arrivals</a></li>
             <li><a href="<?php echo site_url('index.php/pageObjet'); ?>">ajouter objet</a></li>
@@ -99,11 +98,11 @@
       <div class="container">
         <div class="row align-items-start align-items-md-center justify-content-end">
           <div class="col-md-5 text-center text-md-left pt-5 pt-md-0">
-            <h1 class="mb-2">Finding Your Perfect Shoes</h1>
+            <h1 class="mb-2">Trouver des echanges</h1>
             <div class="intro-text text-center text-md-left">
-              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla. </p>
+              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. </p>
               <p>
-                <a href="#" class="btn btn-sm btn-primary">Shop Now</a>
+                <a href="<?php echo site_url('index.php/pageObjet'); ?>" class="btn btn-sm btn-primary">GO</a>
               </p>
             </div>
           </div>
@@ -119,7 +118,7 @@
               <span class="icon-truck"></span>
             </div>
             <div class="text">
-              <h2 class="text-uppercase">Free Shipping</h2>
+              <h2 class="text-uppercase">Simple</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
             </div>
           </div>
@@ -128,7 +127,7 @@
               <span class="icon-refresh2"></span>
             </div>
             <div class="text">
-              <h2 class="text-uppercase">Free Returns</h2>
+              <h2 class="text-uppercase">Efficace</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
             </div>
           </div>
@@ -137,130 +136,38 @@
               <span class="icon-help"></span>
             </div>
             <div class="text">
-              <h2 class="text-uppercase">Customer Support</h2>
+              <h2 class="text-uppercase">Rapide</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="site-section site-blocks-2">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade" data-aos-delay="">
-            <a class="block-2-item" href="#">
-              <figure class="image">
-                <img src="images/women.jpg" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <span class="text-uppercase">Collections</span>
-                <h3>Women</h3>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
-            <a class="block-2-item" href="#">
-              <figure class="image">
-                <img src="<?php echo site_url('images/children.jpg'); ?>" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <span class="text-uppercase">Collections</span>
-                <h3>Children</h3>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
-            <a class="block-2-item" href="#">
-              <figure class="image">
-                <img src="<?php echo site_url('images/men.jpg'); ?>" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <span class="text-uppercase">Collections</span>
-                <h3>Men</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="site-section block-3 site-blocks-2 bg-light">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-7 site-section-heading text-center pt-4">
-            <h2>Featured Products</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="nonloop-block-3 owl-carousel">
-              <div class="item">
-                <div class="block-4 text-center">
-                  <figure class="block-4-image">
-                    <img src="<?php echo site_url('images/cloth_1.jpg'); ?>" alt="Image placeholder" class="img-fluid">
-                  </figure>
-                  <div class="block-4-text p-4">
-                    <h3><a href="#">Tank Top</a></h3>
-                    <p class="mb-0">Finding perfect t-shirt</p>
-                    <p class="text-primary font-weight-bold">$50</p>
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <?php for($i = 0 ; $i < count($images) ; $i++) {?>
+    
+                <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="<?php echo site_url('images/'.$images[$i]['nom']); ?>" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder"><?php echo $images[$i]['description']; ?></h5>
+                                    <br>
+                                    <h5 class="fw-bolder"><?php echo $images[$i]['prix']; ?></h5>
+                                    <!-- Product price-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              <?php } ?>
                   </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="block-4 text-center">
-                  <figure class="block-4-image">
-                    <img src="<?php echo site_url('images/shoe_1.jpg'); ?>" alt="Image placeholder" class="img-fluid">
-                  </figure>
-                  <div class="block-4-text p-4">
-                    <h3><a href="#">Corater</a></h3>
-                    <p class="mb-0">Finding perfect products</p>
-                    <p class="text-primary font-weight-bold">$50</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="block-4 text-center">
-                  <figure class="block-4-image">
-                    <img src="<?php echo site_url('images/cloth_2.jpg'); ?>" alt="Image placeholder" class="img-fluid">
-                  </figure>
-                  <div class="block-4-text p-4">
-                    <h3><a href="#">Polo Shirt</a></h3>
-                    <p class="mb-0">Finding perfect products</p>
-                    <p class="text-primary font-weight-bold">$50</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="block-4 text-center">
-                  <figure class="block-4-image">
-                    <img src="<?php echo site_url('images/cloth_3.jpg'); ?>" alt="Image placeholder" class="img-fluid">
-                  </figure>
-                  <div class="block-4-text p-4">
-                    <h3><a href="#">T-Shirt Mockup</a></h3>
-                    <p class="mb-0">Finding perfect products</p>
-                    <p class="text-primary font-weight-bold">$50</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="block-4 text-center">
-                  <figure class="block-4-image">
-                    <img src="<?php echo site_url('images/shoe_1.jpg'); ?>" alt="Image placeholder" class="img-fluid">
-                  </figure>
-                  <div class="block-4-text p-4">
-                    <h3><a href="#">Corater</a></h3>
-                    <p class="mb-0">Finding perfect products</p>
-                    <p class="text-primary font-weight-bold">$50</p>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+        </section>
     <div class="site-section block-8">
       <div class="container">
         <div class="row justify-content-center  mb-5">

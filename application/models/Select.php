@@ -9,4 +9,11 @@ class Select extends CI_Model {
         $result = $query->result_array();
         return $result;
     }
+
+    public function getImgDes(){
+        $requete = "SELECT * FROM objet join photo on objet.idObjet = photo.idObjet";
+        $query = $this->db->query($requete);
+        $result = $query->result_array();
+        return $result;
+    }
 }

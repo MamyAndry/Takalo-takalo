@@ -5,6 +5,9 @@ class Acceuil extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('index2');
-	}		
+		$this->load->model('select');
+        $data['images']=$this->select->getImgDes();
+        $this->load->view('index2',$data);
+	}	
+	
 }
