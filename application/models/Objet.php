@@ -18,4 +18,12 @@ class Objet extends CI_Model {
         $result = $query->result_array();
         return $result;
     }
+
+    public function getLastIdObject(){
+        $requete = "SELECT MAX(idObjet) FROM Objet";
+        $requete = sprintf($requete,$id);
+        $query = $this->db->query($requete);
+        $result = $query->row_array();
+        return $result;
+    }
 }
