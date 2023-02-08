@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class LoginAdmin extends CI_Controller {
+class LogAdmin extends CI_Controller {
 
 	public function index()
 	{
@@ -9,9 +9,9 @@ class LoginAdmin extends CI_Controller {
 		$pwd = $_POST['password'];
 		$this->load->model('connect');
 		$data = $this->connect->connectAdmin($mail,$pwd);
-        if($data != null){
-            redirect('acceuil');
-        }
-        else redirect('FormLoginAdmin');
+        if($data != null)
+            redirect('acceuilAdmin');
+        else 
+            redirect('FormLoginAdmin');
 	}		
 }
