@@ -5,6 +5,6 @@ class FormLoginAdmin extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('loginuser');
+		$this->load->view('loginAdmin');
 	}		
 }

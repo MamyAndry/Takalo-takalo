@@ -6,6 +6,6 @@ class FormLoginUser extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('LoginUser');
+		$this->load->view('loginUser');
 	}		
 }

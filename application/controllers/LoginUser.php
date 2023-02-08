@@ -5,13 +5,13 @@ class LoginUser extends CI_Controller {
 
 	public function traitement()
 	{
-		$mail = $_POST['mail'];
-		$pwd = $_POST['pwd'];
-		$this->load->models('connect');
+		$mail = $_POST['email'];
+		$pwd = $_POST['password'];
+		$this->load->model('Connect');
 		$data = $this->connect->connectUser($mail,$mdp);
 		if($data != null){
-            redirect(site_url('acceuil'));
+            redirect('acceuil');
         }
-		else redirect(site_url('formloginuser'));
+		else redirect('FormLoginUser');
 	}		
 }

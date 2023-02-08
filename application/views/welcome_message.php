@@ -15,12 +15,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div id="background">
             <h1>TAKALO-TAKALO</h1>
         </div>
-        <span><a href="<?php echo site_url('FormLoginAdmin'); ?>">
+        <span><a href="<?php echo 'FormLoginAdmin'; ?>">
             <div class="d-grid gap-2 col-6 mx-auto">
                 <button class="btn btn-primary" type="button">Sign in as admin </button>
               </div>
             </a></span>
-            <span><a href="<?php echo site_url('FormLoginUser'); ?>">
+            <span><a href="<?php echo 'FormLoginUser'; ?>">
             <div class="d-grid gap-2 col-6 mx-auto">
                 <button class="btn btn-primary" type="button">Sign in as user</button>
               </div>

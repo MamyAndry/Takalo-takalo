@@ -6,6 +6,7 @@ class Connect extends CI_Model {
     public function connectUser($mail,$mdp){
         $requete = "SELECT * FROM utilisateur WHERE email = '%s' AND password = '%s'";
         $requete = sprintf($requete,$mail,$mdp);
+        echo $requete;
         $query = $this->db->query($requete);
         $result = $query->row_array();
         $this->session->set_userData("idUser",$result['iduser']);
@@ -15,6 +16,7 @@ class Connect extends CI_Model {
     public function connectAdmin($mail,$mdp){
         $requete = "SELECT * FROM utilisateur WHERE email = '%s' AND password = '%s' AND estAdmin = 1";
         $requete = sprintf($requete,$mail,$mdp);
+        echo $requete;
         $query = $this->db->query($requete);
         $result = $query->row_array();
         $this->session->set_userData("id",$result['iduser']);

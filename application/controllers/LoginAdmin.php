@@ -3,15 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class LoginAdmin extends CI_Controller {
 
-	public function traitement()
+	public function index()
 	{
-		$mail = $_POST['mail'];
-		$pwd = $_POST['pwd'];
-		$this->load->models('connect');
-		$data = $this->connect->connectAdmin($mail,$mdp);
+		$mail = $_POST['email'];
+		$pwd = $_POST['password'];
+		$this->load->model('connect');
+		$data = $this->connect->connectAdmin($mail,$pwd);
         if($data != null){
-            redirect(site_url('acceuil'));
+            redirect('acceuil');
         }
-        else redirect(site_url('formloginadmin'));
+        else redirect('FormLoginAdmin');
 	}		
 }
