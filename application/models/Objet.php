@@ -12,7 +12,7 @@ class Objet extends CI_Model {
     }
     
     public function listProposition($id){
-        $requete = "SELECT * FROM echange WHERE idUser2 = %i AND idObject2 is null";
+        $requete = "SELECT * FROM echange WHERE idUser2 = %i AND etatechange = 0";
         $requete = sprintf($requete,$id);
         $query = $this->db->query($requete);
         $result = $query->result_array();
