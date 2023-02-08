@@ -7,7 +7,9 @@ class Acceuil extends CI_Controller {
 	{
 		$this->load->model('select');
         $data['images']=$this->select->getImgDes();
-        $this->load->view('index2',$data);
+		$this->load->model('Objet');
+        $data['objets']=$this->Objet->listObjectById(1);
+		$this->load->view('index2',$data);
 	}	
 	
 }

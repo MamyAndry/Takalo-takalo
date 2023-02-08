@@ -89,33 +89,6 @@
     <div class="site-section site-section-sm site-blocks-1">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="">
-            <div class="icon mr-4 align-self-start">
-              <span class="icon-truck"></span>
-            </div>
-            <div class="text">
-              <h2 class="text-uppercase">Simple</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon mr-4 align-self-start">
-              <span class="icon-refresh2"></span>
-            </div>
-            <div class="text">
-              <h2 class="text-uppercase">Efficace</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon mr-4 align-self-start">
-              <span class="icon-help"></span>
-            </div>
-            <div class="text">
-              <h2 class="text-uppercase">Rapide</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -148,7 +121,7 @@
       <div class="container">
         <div class="row justify-content-center  mb-5">
           <div class="col-md-7 site-section-heading text-center pt-4">
-            <h2>Big Sale!</h2>
+            <h2>Echangez ici!</h2>
           </div>
         </div>
         <div class="row align-items-center">
@@ -156,10 +129,31 @@
             <a href="#"><img src="<?php echo site_url('images/blog_1.jpg'); ?>" alt="Image placeholder" class="img-fluid rounded"></a>
           </div>
           <div class="col-md-12 col-lg-5 text-center pl-md-5">
-            <h2><a href="#">50% less in all items</a></h2>
-            <p class="post-meta mb-4">By <a href="#">Carl Smith</a> <span class="block-8-sep">&bullet;</span> September 3, 2018</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iste dolor accusantium facere corporis ipsum animi deleniti fugiat. Ex, veniam?</p>
-            <p><a href="#" class="btn btn-primary btn-sm">Shop Now</a></p>
+            <form action="lister" method="post">
+              <div class="col-md-4">
+                  <label for="inputState" class="form-label">Marges</label>
+                  <select id="inputState" class="form-select" name="marge">
+                      <option values="10">+/-10%</option>
+                      <option values="20">+/-20%</option>
+                  </select>
+              </div>
+              <fieldset class="row mb-3">
+                  <legend class="col-form-label col-sm-2 pt-0">A echanger</legend>
+                  <div class="col-sm-10">
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" name="idObjet" id="gridRadios1" value="<?php echo $objets[0]['idObjet'];?>" checked>
+                          <label class="form-check-label" for="gridRadios1"><?php echo $objets[0]['nom'];?> <?php echo $objets[0]['prix'];?> Ar</label>
+                      </div>
+                      <?php for ($i=1; $i < count($objets); $i++) { ?>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="idObjet" id="gridRadios1" value="<?php echo $objets[$i]['idObjet'];?>">
+                              <label class="form-check-label" for="gridRadios1"><?php echo $objets[$i]['nom'];?> <?php echo $objets[$i]['prix'];?> Ar</label>
+                          </div>
+                      <?php } ?>
+                  </div>
+              </fieldset>
+              <button type="submit" class="btn btn-primary">Chercher</button>
+            </form>
           </div>
         </div>
       </div>
