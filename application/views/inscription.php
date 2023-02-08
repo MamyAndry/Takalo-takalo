@@ -20,14 +20,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <section class="register-photo">
         <div class="form-container">
             <div class="image-holder"></div>
-            <form method="post" action="#">
+            <form method="post" action="<?php echo site_url('index.php/Inscription');?>">
                 <h2 class="text-center"><strong>INSCRIPTION</strong></h2>
+                <br>
+                <div class="mb-3"><input class="form-control" type="text" name="nom" placeholder="Nom"></div>
                 <br>
                 <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div>
                 <br>
                 <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
                 <br>
-                <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Sign Up</button></div><a class="already" href="#">You already have an account? Login here.</a>
+                <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Sign Up</button></div>
             </form>
         </div>
     </section>
