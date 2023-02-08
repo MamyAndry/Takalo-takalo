@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <section class="register-photo">
         <div class="form-container">
             <div class="image-holder"></div>
-            <form method="post" action="<?php echo site_url(''); ?>">
+            <form method="post" action="#">
                 <h2 class="text-center"><strong>INSCRIPTION</strong></h2>
                 <br>
                 <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div>

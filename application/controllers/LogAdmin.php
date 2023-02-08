@@ -10,7 +10,7 @@ class LogAdmin extends CI_Controller {
 		$this->load->model('connect');
 		$data = $this->connect->connectAdmin($mail,$pwd);
         if($data != null)
-            redirect('acceuilAdmin');
+            redirect("index.php/acceuilAdmin");
         else 
             redirect('FormLoginAdmin');
 	}		

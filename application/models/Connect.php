@@ -9,7 +9,7 @@ class Connect extends CI_Model {
         echo $requete;
         $query = $this->db->query($requete);
         $result = $query->row_array();
-        $this->session->set_userData("idUser",$result['iduser']);
+        $this->session->set_userData($result['iduser'],"idUser");
         return $result;
     }
 
@@ -19,12 +19,12 @@ class Connect extends CI_Model {
         echo $requete;
         $query = $this->db->query($requete);
         $result = $query->row_array();
-        $this->session->set_userData("id",$result['iduser']);
+        $this->session->set_userData($result['iduser'],"idUser");
         return $result;
     }
 
     public function isAdmin($id){
-        $requete = "SELECT idUser FROM utilisateur WHERE id = %s estAdmin = 1";
+        $requete = "SELECT idUser FROM utilisateur WHERE id = %i estAdmin = 1";
         $requete = sprintf($requete,$id);
         $query = $this->db->query($requete);
         $result = $query->row_array();

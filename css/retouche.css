@@ -1,7 +1,7 @@
 #center{
     width: 1300px;
     height: 500px;
-    margin: auto;
+    /* margin: auto; */
 }
 body{
     background-image: url("../photo/wcup.jpg");
@@ -14,6 +14,7 @@ body{
     font-size: 30px;
     /* background-color: darkgray; */
 }
-#center span{
-    float: right;
+
+.button{
+    margin-left: 50px;
 }

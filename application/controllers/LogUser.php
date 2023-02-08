@@ -10,7 +10,7 @@ class LogUser extends CI_Controller {
 		$this->load->model('connect');
 		$data = $this->connect->connectUser($mail,$pwd);
 		if($data != null)
-		redirect('acceuil');
+		redirect('index.php/acceuil');
 		else 
 			redirect('FormLoginUser');
 	}
