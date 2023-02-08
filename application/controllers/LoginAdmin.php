@@ -10,8 +10,8 @@ class LoginAdmin extends CI_Controller {
 		$this->load->models('connect');
 		$data = $this->connect->connectAdmin($mail,$mdp);
         if($data != null){
-            redirect(site_url(''));
+            redirect(site_url('acceuil'));
         }
-        else redirect(site_url(''));
+        else redirect(site_url('formloginadmin'));
 	}		
 }
