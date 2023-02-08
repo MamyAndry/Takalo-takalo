@@ -1,4 +1,3 @@
-<?php //echo site_url("getValObject");?>
 <!DOCTYPE html>
 <html lang="en">
 
