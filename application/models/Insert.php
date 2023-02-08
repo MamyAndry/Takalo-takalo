@@ -20,7 +20,7 @@ class Insert extends CI_Model {
         echo count($filenames);
         for ($i=0; $i < count($filenames); $i++) { 
             $sql = "";
-            $sql="INSERT INTO photo (idobjet,titre) VALUES (%s,'%s')";
+            $sql="INSERT INTO photo (idobjet,nom) VALUES (%s,'%s')";
             $sql = sprintf($sql,$idObjet,$filenames[$i]);
             echo $sql;
             $this->db->query($sql);

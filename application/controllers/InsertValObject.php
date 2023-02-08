@@ -4,6 +4,7 @@
     class InsertValObject extends CI_Controller {
         public function index(){
             $idUtilisateur=$this->input->post('idUtilisateur');
+            // $idUtilisateur=$this->session->userdata('idUser');
             $idCategorie=$this->input->post('idCategorie');
             $nom=$this->input->post('nom');
             $description=$this->input->post('description');
