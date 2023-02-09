@@ -24,7 +24,7 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" alt="Takalo-Takalo"/></a>
+        <a class="navbar-brand brand-logo" href="<?php echo site_url();?>"><img src="images/logo.svg" alt="Takalo-Takalo"/></a>
         <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-stretch">
@@ -55,30 +55,6 @@
     <div class="container-fluid page-body-wrapper">
       <div class="row row-offcanvas row-offcanvas-right">
         <!-- partial:partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="menu-title">nav1</span>
-                <i class="mdi mdi-home menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">nav2</span>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-                </ul>
-                </div>
-            </li>
-            
-          </ul>
-
-        </nav>
         <!-- partial -->
         <div class="content-wrapper">
           <div class="row purchace-popup">
@@ -122,7 +98,7 @@
                             <?php echo $categories[$i]['nom'];?>
                           </td>
                           <td>
-                          <a href="<?php echo site_url("index.php/delete/deleteCategorie/".$categories[$i]['idCategorie']);?>"><button type="button" class="btn btn-secondary">Delete</button></a>
+                          <a href="<?php echo site_url("index.php/update/index/".$categories[$i]['idCategorie']);?>"><button type="button" class="btn btn-secondary">Update</button></a>
                           </td>
                         </tr>
                     <?php } ?>
