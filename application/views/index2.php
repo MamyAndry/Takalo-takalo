@@ -89,7 +89,7 @@
             <li><a href="shop.html">Shop</a></li>
             <li><a href="#">Catalogue</a></li>
             <li><a href="#">New Arrivals</a></li>
-            <li><a href="<?php echo base_url('index.php/pageObjet'); ?>">ajouter objet</a></li>
+            <li><a href="<?php echo site_url('index.php/pageObjet'); ?>">ajouter objet</a></li>
           </ul>
         </div>
       </nav>
