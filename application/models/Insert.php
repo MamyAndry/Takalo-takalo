@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Insert extends CI_Model {
     
     public function insertInscrip($nom,$email,$password){
-        $sql = "INSERT INTO utilisateur(nom,email,estadmin,password) VALUES ('%s','%s','%s',%i)";
+        $sql = "INSERT INTO utilisateur(nom,email,estadmin,password) VALUES ('%s','%s','%s',%d)";
         $sql = sprintf($sql,$nom,$email,$password,0);
         $this->db->query($sql);
     }

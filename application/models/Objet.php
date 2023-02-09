@@ -12,7 +12,7 @@ class Objet extends CI_Model {
     }
     
     public function listProposition($id){
-        $requete = "SELECT * FROM echange WHERE idUser2 = %i AND etatechange = 0";
+        $requete = "SELECT * FROM echange WHERE idUser2 = %d AND etatechange = 0";
         $requete = sprintf($requete,$id);
         $query = $this->db->query($requete);
         $result = $query->result_array();
@@ -33,7 +33,7 @@ class Objet extends CI_Model {
             $requete = sprintf($requete,$motcle);
         }
         else{
-            $requete = "SELECT * FROM objet WHERE description LIKE '%%s%' AND idcategorie = %i";
+            $requete = "SELECT * FROM objet WHERE description LIKE '%%s%' AND idcategorie = %d";
             $requete = sprintf($requete,$motcle,$categorie);
         }
         $query = $this->db->query($requete);

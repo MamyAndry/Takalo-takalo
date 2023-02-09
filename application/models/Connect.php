@@ -9,7 +9,7 @@ class Connect extends CI_Model {
         echo $requete;
         $query = $this->db->query($requete);
         $result = $query->row_array();
-        $this->session->set_userData($result['iduser'],"idUser");
+        $this->session->set_userdata($result['iduser'],"idUser");
         return $result;
     }
 
@@ -19,7 +19,7 @@ class Connect extends CI_Model {
         echo $requete;
         $query = $this->db->query($requete);
         $result = $query->row_array();
-        $this->session->set_userData($result['iduser'],"idUser");
+        $this->session->set_userdata($result['iduser'],"idUser");
         return $result;
     }
 
