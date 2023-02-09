@@ -5,6 +5,19 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="<?php echo site_url('css/bootstrap.css'); ?>">
+        <link rel="stylesheet" href="<?php echo site_url('https://fonts.googleapis.com/css?family=Mukta:300,400,700'); ?>"> 
+        <link rel="stylesheet" href="<?php echo site_url('fonts/icomoon/style.css'); ?>">
+        <link rel="stylesheet" href="<?php echo site_url('css/bootstrap.min.css'); ?>">
+        <link rel="stylesheet" href="<?php echo site_url('css/magnific-popup.css'); ?>">
+        <link rel="stylesheet" href="<?php echo site_url('css/jquery-ui.css'); ?>">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="<?php echo site_url('css/style.css'); ?>">
+    
     </head>
     <body>
     <div class="site-wrap">
@@ -48,8 +61,8 @@
       <nav class="site-navigation text-right text-md-center" role="navigation">
         <div class="container">
           <ul class="site-menu js-clone-nav d-none d-md-block">
-            <li><a href="<?php echo site_url('index.php/Acceuil');?>">Home</a></li>
-            <li><a href="<?php echo site_url('index.php/');?>">Liste Proposition</a></li>
+          <li><a href="<?php echo site_url('index.php/Acceuil');?>">Home</a></li>
+            <li><a href="<?php echo site_url('index.php/showProposition');?>">Liste Proposition</a></li>
             <li><a href="<?php echo site_url('index.php/pageObjet'); ?>">Ajouter objet</a></li>
           </ul>
         </div>
